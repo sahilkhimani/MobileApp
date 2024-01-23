@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="INOVI.Pages.AddApplication"
+             Title="Add Application"
+             Shell.BackgroundColor="#0E558E">
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="False" IsEnabled="False" />
+    </Shell.BackButtonBehavior>
+    <ScrollView>
+        <StackLayout>
+            <Entry x:Name="titleEntry"
+                       Placeholder="Add your Application Title"
+                       BackgroundColor="Transparent"
+                       TextColor="Black"
+                       FontSize="14"
+                       HeightRequest="60"
+                       Margin="10,0,10,0" >
+            </Entry>
+
+            <Frame CornerRadius="8"
+                 BorderColor="LightGray"
+                 Padding="10"
+                 Margin="10,20,10,0"
+                 HeightRequest="280"
+                 VerticalOptions="Start"
+                 HasShadow="True">
+                <StackLayout Orientation="Vertical">
+                    <Label
+                     Text="Description"
+                     FontSize="20" />
+                    <Editor x:Name="descriptionEditor" IsSpellCheckEnabled="True" TextChanged="HandleTextChanged"
+                            Placeholder="Enter your Description" HeightRequest="200" />
+                    <Label x:Name="wordCountLabel" Text="Word Count: 0/1000" HorizontalOptions="EndAndExpand"
+                            VerticalOptions="EndAndExpand"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame CornerRadius="8"
+                   HeightRequest="200" Margin="10,10,10,10"
+                HasShadow="True" >
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="OnAddAttachment" Tapped="OnAddAttachmentClicked" />
+                </Frame.GestureRecognizers>
+                    <StackLayout VerticalOptions="Center">
+                        <Image x:Name="Img" Source="upload.svg" WidthRequest="50" HeightRequest="50"
+                       VerticalOptions="Center" HorizontalOptions="Center"/>
+                        <ActivityIndicator x:Name="activityIndicator" IsRunning="False" IsVisible="False"/>
+                        <StackLayout x:Name="ImageContainer" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand" Orientation="Horizontal"></StackLayout>
+                        <Label
+                        x:Name="UploadLabel"
+                        Text="Upload Your file / photo"
+                        FontSize="15"
+                        TextColor="Grey"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"/>
+                        <Button x:Name="SelectFileButton" Text="Add" Clicked="SelectFileButton_Clicked" Margin="10,10,0,0" WidthRequest="100" HorizontalOptions="Start" BackgroundColor="#0E558E" TextColor="White" IsVisible="False"/>
+                    </StackLayout>
+            </Frame>
+
+            <StackLayout VerticalOptions="EndAndExpand" Orientation="Horizontal" Margin="20,0,20,10">
+                <Button x:Name="btnCancel" Text="Cancel"  TextColor="#0E558E" BackgroundColor="White" VerticalOptions="End" HorizontalOptions="StartAndExpand" WidthRequest="150" HeightRequest="60" Clicked="btnCancel_Clicked" ></Button>
+                <Button x:Name="btnSendButton" Text="Submit" TextColor="White"  BackgroundColor="#0E558E"  VerticalOptions="End" HorizontalOptions="EndAndExpand" WidthRequest="150" HeightRequest="60" Clicked="btnSendButton_Clicked" ></Button>
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

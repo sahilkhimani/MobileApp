@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="INOVI.EmailVerification"
+             Title="EmailVerification"
+              Shell.NavBarIsVisible="False"
+            Shell.FlyoutBehavior="Disabled">
+    <ScrollView>
+        <StackLayout Margin="10" HorizontalOptions="Fill" VerticalOptions="Fill">
+
+            <StackLayout Padding="10">
+                <Image Source="Images/logo.svg"/>
+                <Label
+                    Text="Email Verification!"
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="28"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Margin="20"
+                    FontAttributes="Bold"/>
+
+                <Label
+                    Text="We've sent a verification code on your provided email address. Please enter that verification code to continue."
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="15"
+                    TextColor="Grey"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    Margin="10,0,10,0"
+                />
+
+                <StackLayout Orientation="Horizontal" Margin="10" HorizontalOptions="Center">
+                    <Frame BorderColor="Gray" CornerRadius="5" Padding="5" Margin="5">
+                        <Entry x:Name="firstDigit" MaxLength="1" Keyboard="Numeric" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="20" />
+                    </Frame>
+                    <Frame BorderColor="Gray" CornerRadius="5" Padding="5" Margin="5">
+                        <Entry x:Name="secondDigit" MaxLength="1" Keyboard="Numeric" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="20"  />
+                    </Frame>
+                    <Frame BorderColor="Gray" CornerRadius="5" Padding="5" Margin="5">
+                        <Entry x:Name="thirdDigit" MaxLength="1" Keyboard="Numeric" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="20"  />
+                    </Frame>
+                    <Frame BorderColor="Gray" CornerRadius="5" Padding="5" Margin="5">
+                        <Entry x:Name="fourthDigit" MaxLength="1" Keyboard="Numeric" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" FontSize="20"  />
+                    </Frame>
+                </StackLayout>
+
+                <FlexLayout Margin="0,20,0,0" HorizontalOptions="Center">
+                    <Label FontSize="15" HorizontalOptions="Center" TextColor="Grey" Text="If you don't receive code"/>
+                    <Label FontSize="15" TextColor="#0E558E" Text=" Resend?">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="resendCode" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                    
+                </FlexLayout>
+
+                <ActivityIndicator x:Name="activityIndicator" IsRunning="False" Margin="0,15,0,0"/>
+
+
+            </StackLayout>
+
+            <StackLayout VerticalOptions="EndAndExpand" Orientation="Horizontal" Margin="20,0,20,0">
+                <Button x:Name="btnCancel" Text="Cancel"  TextColor="#0E558E" BackgroundColor="White" VerticalOptions="End" HorizontalOptions="StartAndExpand" WidthRequest="150" HeightRequest="60" Clicked="btnCancel_Clicked"></Button>
+                <Button x:Name="btnSendButton" IsEnabled="True" Text="Verify" TextColor="White" BackgroundColor="#0E558E"  VerticalOptions="End" HorizontalOptions="EndAndExpand" WidthRequest="150" HeightRequest="60" Clicked="VerifyClicked"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

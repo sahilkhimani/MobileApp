@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="INOVI.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:INOVI"
+    xmlns:Pages="clr-namespace:INOVI.Pages"
+    Shell.TabBarIsVisible="False"
+    >
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        FlyoutItemIsVisible="False"
+        Shell.FlyoutBehavior="Disabled"
+        Route="MainPage" 
+        Shell.NavBarIsVisible="False"/>
+    
+    <FlyoutItem Route="HomePage" FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Dashboard" Icon="dashboard.svg" ContentTemplate="{DataTemplate Pages:HomePage}" Route="Homepage" />
+        <ShellContent Title="Profile" Icon="profile.svg" ContentTemplate="{DataTemplate Pages:ProfilePage}" Route="Homepage"/>
+        <ShellContent Title="My stats" Icon="mystats.svg" ContentTemplate="{DataTemplate Pages:MyStatsPage}" Route="Homepage"/>
+        <ShellContent Title="My Requests" Icon="myrequest.svg" ContentTemplate="{DataTemplate Pages:MyRequestsPage}" Route="Homepage" />
+        <ShellContent Title="Settings" Icon="setting.svg" ContentTemplate="{DataTemplate Pages:SettingPage}" Route="Homepage"/>
+        <ShellContent Title="Help and Support" Icon="helpsupport.svg" ContentTemplate="{DataTemplate Pages:HelpandSupportPage}" Route="Homepage" />
+    </FlyoutItem>
+
+    <Shell.FlyoutHeader>
+        <FlexLayout Margin="20,50,20,20">
+            <!--<Frame CornerRadius="100" BackgroundColor="#0E558E" WidthRequest="100" HeightRequest="100" Margin="0,0,5,0">
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="OnAddAttachment" Tapped="OnProfileClicked" />
+                </Frame.GestureRecognizers>
+                <Image x:Name="Img" WidthRequest="100" HeightRequest="100" Aspect="AspectFill"/>
+            </Frame>-->
+          <Image Source="logo.png"/>
+            <!--<StackLayout Orientation="Vertical" VerticalOptions="Center">
+                <Label x:Name="userNameLabel" BindingContext="{x:Reference userNameLabel}" Text="talha" FontAttributes="Bold" VerticalOptions="Center"/>
+                <Label x:Name="userRoleLabel" VerticalOptions="End"/>
+            </StackLayout>-->
+        </FlexLayout>
+    </Shell.FlyoutHeader>
+
+    <Shell.FlyoutFooter>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <!--<Image Source="power.png" />-->
+            <Button Text="Log Out" BackgroundColor="White" FontSize="16" FontAttributes="Bold" TextColor="#0E558E" Clicked="LogOutClicked">
+                </Button>
+            </StackLayout>
+            <Label
+                Text="Version 1.50.2 (718)"
+                FontSize="14"
+                TextColor="Black"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HorizontalTextAlignment="Center"
+                Margin="0,10,0,50"
+                />
+        </StackLayout>
+    </Shell.FlyoutFooter>
+
+</Shell>

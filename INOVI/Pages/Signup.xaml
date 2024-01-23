@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="INOVI.Signup"
+             Title="Signup"
+              Shell.NavBarIsVisible="False"
+              Shell.FlyoutBehavior="Disabled">
+    <ScrollView>
+        <StackLayout Margin="10" HorizontalOptions="Fill" VerticalOptions="Fill">
+
+            <StackLayout Padding="10">
+
+
+                <Image Source="Images/logo.svg"/>
+
+
+                <Label
+                    Text="Create your account"
+                    SemanticProperties.HeadingLevel="Level1"
+                    FontSize="28"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Margin="0"
+                />
+
+                <Entry x:Name="nameTxt"
+                       Placeholder="Full Name"
+                       Margin="0,10,0,0"
+                       BackgroundColor="Transparent">
+                </Entry>
+
+                <Entry x:Name="usernameTxt"
+                   Placeholder="User Name"
+                   Margin="0,10,0,0"
+                   BackgroundColor="Transparent">
+                </Entry>
+
+                <Entry x:Name="emailTxt"
+                   Placeholder="Work Email Address"
+                   Margin="0,10,0,0"
+                   BackgroundColor="Transparent">
+                </Entry>
+
+                <Entry x:Name="passwordTxt"
+                   Placeholder="Password (8 or more characters)"
+                   IsPassword="True"
+                   Margin="0,10,0,0"
+                   BackgroundColor="Transparent">
+                </Entry>
+
+                <FlexLayout>
+                    <CheckBox x:Name="myCheckbox" 
+                       Margin="-6,10,10,0"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="Start"
+                        Color="Grey" 
+                    />
+
+                    <StackLayout Margin="0,15,0,0" >
+                        <Label FontSize="14" HorizontalOptions="Fill" VerticalOptions="Fill">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Yes, I understand and agree to the " FontSize="14" TextColor="Grey" />
+                                    <Span Text="Inovi Technologies Terms of services" FontSize="14" TextColor="#0E558E" />
+                                    <Span Text=", including the " FontSize="14" TextColor="Grey" />
+                                    <Span Text="User Agreement" FontSize="14" TextColor="#0E558E" />
+                                    <Span Text=" and " FontSize="14" TextColor="Grey" />
+                                    <Span Text="Privacy Policy" FontSize="14" TextColor="#0E558E" />
+                                    <Span Text="." FontSize="14" TextColor="Grey" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                </FlexLayout>
+
+                <ActivityIndicator x:Name="activityIndicator" IsRunning="False" Margin="0,15,0,0"/>
+
+
+            </StackLayout>
+            <StackLayout VerticalOptions="EndAndExpand">
+                <Button x:Name="btnSignup" Text="Create my account" TextColor="White"  BackgroundColor="#0E558E" Margin="0,15,0,10" HeightRequest="60" Clicked="btnSignup_Clicked"  VerticalOptions="EndAndExpand">
+                </Button>
+                <StackLayout  Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="EndAndExpand">
+                    <Label Text="Already have an account?" TextColor="Grey"
+                    />
+                    <Label Text=" Log in"
+                           TextColor="#0E558E"
+                           HorizontalOptions="Center"
+                           VerticalOptions="End"
+                           VerticalTextAlignment="End">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnLoginTapped" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

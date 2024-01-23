@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:INOVI"
+             x:Class="INOVI.Pages.HomePage"
+             Title="Dashboard"
+             BackgroundColor="White"
+             Shell.TabBarIsVisible="False"
+             Shell.FlyoutBehavior="Flyout"
+             NavigationPage.HasNavigationBar="False"
+             Shell.BackgroundColor="#0E558E">
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="False" IsEnabled="False" />
+    </Shell.BackButtonBehavior>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:StringToColorConverter x:Key="ColorConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView>
+        <StackLayout>
+            <Frame CornerRadius="0"
+             Padding="10"
+             HeightRequest="50">
+                <Label
+                Text="Your Applications"
+                FontSize="14"
+                TextColor="Grey"
+                VerticalOptions="Center"/>
+            </Frame>
+            <ActivityIndicator x:Name="activityIndicator" IsRunning="False" IsVisible="False" VerticalOptions="CenterAndExpand"/>
+            <StackLayout x:Name="noApplicationLabel"
+                         HorizontalOptions="Center"
+                         VerticalOptions="CenterAndExpand"
+                         IsVisible="False">
+                <Label Text="No Applications Yet!"
+                       FontSize="23"
+                       FontAttributes="Bold"/>
+            </StackLayout>
+            <ListView x:Name="listview" HasUnevenRows="True"
+                      ItemSelected="OnItemSelected"
+                      BackgroundColor="White">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10,5,10,5" BackgroundColor="White">
+                                <Frame CornerRadius="8"
+                                       BorderColor="LightGray"
+                                        Margin="5,5,5,5"
+                                        HasShadow="True"
+                                       x:Name="frameItems">
+                                    <StackLayout>
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label Text="{Binding Title}"
+                                               FontSize="20"
+                                               WidthRequest="180"
+                                               Margin="0,0,0,10"
+                                               FontAttributes="Bold"/>
+                                            <Label Text="{Binding CurrentStatus}"
+                                               x:Name="statusLabel"
+                                               FontSize="20"
+                                               Margin="0,5,0,0"
+                                               TextColor="{Binding ColorCode, Converter = {StaticResource ColorConverter}}"
+                                               FontAttributes="Bold"
+                                               HorizontalOptions="EndAndExpand"/>
+                                        </StackLayout>
+                                        <Label Text="{Binding ShortDescription}"
+                                                FontSize="14"
+                                                TextColor="Grey"/>
+
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

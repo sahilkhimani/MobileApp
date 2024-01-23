@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="INOVI.MainPage"
+             BackgroundImageSource="Images/pngwing.svg">
+    <ScrollView>
+        <StackLayout
+            Spacing="25"
+            Padding="0,0"
+            Margin="10"
+            VerticalOptions="Fill"
+            HorizontalOptions="Fill">
+
+            <Image
+                Source="Images/mainlogo.svg"
+                Margin="0,150,0,0"
+               
+            />
+            
+            <Label
+                Text="Welcome to Inovi Technologies"
+                TextColor="White"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to Inovi Technologies"
+                FontSize="18"
+                HorizontalOptions="Center" 
+                Margin="0,50,0,0"
+            />
+
+            <Button  Text="Login" Clicked="OnLoginPage" TextColor="White" BackgroundColor="#0E558E" HeightRequest="60" Margin="0,0,0,-10" >
+            </Button>
+
+            <Button  Text="Sign up" Clicked="OnSignup" TextColor="White" BackgroundColor="#0E558E" HeightRequest="60">
+            </Button>
+            <ActivityIndicator x:Name="activityIndicator" IsRunning="False" Margin="0,15,0,0" Color="white"/>
+
+
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="Center" VerticalOptions="EndAndExpand">
+                <Label Text="Privacy Policy" TextColor="White" Margin="0,0,10,0" />
+                
+                <Label Text="|" TextColor="White" Margin="0,0,10,0" />
+                    
+                <Label Text="Inovi Telecom" TextColor="White"  />
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

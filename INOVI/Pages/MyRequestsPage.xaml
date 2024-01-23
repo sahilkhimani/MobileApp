@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="INOVI.Pages.MyRequestsPage"
+             Title="MyRequestsPage"
+             Shell.BackgroundColor="#0E558E" >
+    <Shell.BackButtonBehavior>
+        <BackButtonBehavior IsVisible="False" IsEnabled="False" />
+    </Shell.BackButtonBehavior>
+    <ScrollView>
+        <StackLayout>
+
+            <StackLayout>
+                <Entry x:Name="titleEntry"
+                BackgroundColor="Transparent"
+                TextColor="Black"
+                FontSize="14"
+                HeightRequest="60"
+                Margin="10,0,10,0" >
+                </Entry>
+            </StackLayout>
+
+            <Frame CornerRadius="8"
+            BorderColor="LightGray"
+            Padding="10"
+            Margin="10,20,10,0"
+            HeightRequest="280"
+            VerticalOptions="Start"
+            HasShadow="True">
+                <StackLayout Orientation="Vertical">
+                    <Label
+                    Text="Description"
+                    FontSize="20" />
+                    <Editor x:Name="descriptionLabel" IsSpellCheckEnabled="True" Placeholder="Enter your Description" HeightRequest="200" />
+                    <!--<Label Text="Approved By:" HorizontalOptions="StartAndExpand"
+                        VerticalOptions="EndAndExpand"/>-->
+                </StackLayout>
+            </Frame>
+
+            <Frame CornerRadius="8"
+       BorderColor="LightGray"
+       Padding="10"
+       Margin="10,10,10,10"
+       HeightRequest="100"
+       VerticalOptions="Start"
+       HasShadow="True">
+                <ScrollView Orientation="Horizontal">
+                    <StackLayout  VerticalOptions="Start">
+                        <Label Text="Attachments"
+                                FontSize="14"
+                                TextColor="Black"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Start"
+                                HorizontalTextAlignment="Start"
+                                TextDecorations="Underline"
+                                Margin="10,0,0,0" />
+
+                        <StackLayout x:Name="ImageContainer" VerticalOptions="Center" HorizontalOptions="StartAndExpand" Orientation="Horizontal" Margin="0,5,0,0" />
+                    </StackLayout>
+                </ScrollView>
+            </Frame>
+            <StackLayout x:Name="remarksBox">
+                <Entry x:Name="remarksEntry"
+                       Placeholder="Remarks"
+                        BackgroundColor="Transparent"
+                        TextColor="Black"
+                        FontSize="14"
+                        HeightRequest="60"
+                        Margin="10,0,10,10" >
+                </Entry>
+            </StackLayout>
+            <StackLayout IsVisible="False" x:Name="approverBtns" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand">
+                <Button Text="Reject" TextColor="White" BackgroundColor="DarkRed" HeightRequest="60" WidthRequest="150" Margin="10,0,10,10" VerticalOptions="EndAndExpand" Clicked="rejectClicked"></Button>
+                <Button Text="Approve" TextColor="White" BackgroundColor="#0E558E" WidthRequest="150" HeightRequest="60" Margin="10,0,10,10" VerticalOptions="EndAndExpand" Clicked="approveClicked"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
