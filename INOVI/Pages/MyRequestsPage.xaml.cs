@@ -12,7 +12,7 @@ public partial class MyRequestsPage : ContentPage
     CallApi api = new CallApi();
     UpdateStatusDTO status = new UpdateStatusDTO();
     List<string> lst = new List<string>();
-    public MyRequestsPage(GetQueryDTO req)
+    public MyRequestsPage(GetQueryByIdDTO req)
     {
         InitializeComponent();
         titleEntry.IsReadOnly = true;

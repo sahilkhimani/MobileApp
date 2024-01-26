@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace INOVI.DTO;
 
-public class GetQueryDTO
+public class GetQueryByIdDTO
 {
     public int QueryId { get; set; }
     public string Title { get; set; }
@@ -17,6 +17,19 @@ public class GetQueryDTO
     public string ColorCode { get; set; }
     public List<byte[]> Attachmentbytes { get; set; }
     public string Remarks { get; set; }
+
+}
+
+public class GetQueryDTO
+{
+    public int QueryId { get; set; }
+    public string Title { get; set; }
+    public string Description { get; set; }
+    public string ShortDescription { get; set; }
+    public string CurrentStatus { get; set; }
+    public string ColorCode { get; set; }
+    //public List<byte[]> Attachmentbytes { get; set; }
+    //public string Remarks { get; set; }
 
 }
 

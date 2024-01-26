@@ -28,7 +28,7 @@
                 TextColor="Grey"
                 VerticalOptions="Center"/>
             </Frame>
-            <ActivityIndicator x:Name="activityIndicator" IsRunning="False" IsVisible="False" VerticalOptions="CenterAndExpand"/>
+            <ActivityIndicator x:Name="activityIndicator" IsRunning="False" IsVisible="False"/>
             <StackLayout x:Name="noApplicationLabel"
                          HorizontalOptions="Center"
                          VerticalOptions="CenterAndExpand"

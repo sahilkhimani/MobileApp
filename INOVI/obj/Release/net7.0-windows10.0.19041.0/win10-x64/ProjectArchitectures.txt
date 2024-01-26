@@ -1,1 +1,0 @@
-D:\QueryPro\Inovi App\INOVI\INOVI.csproj;x64

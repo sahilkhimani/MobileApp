@@ -118,17 +118,21 @@ public partial class HomePage : ContentPage
     }
 
 
-    private void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+    private async void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
     {
-        if (e.SelectedItem != null && e.SelectedItem is GetQueryDTO req)
+        if(e.SelectedItem != null && e.SelectedItem is GetQueryDTO req)
         {
-            Navigation.PushAsync(new MyRequestsPage(req));
+            startLoad();
+            string data = JsonConvert.SerializeObject(req.QueryId);
+            string response = await api.consumeapi(data, "query/getquerybyid");
+            stopLoad();
+            GetQueryByIdDTO responseList = JsonConvert.DeserializeObject<GetQueryByIdDTO>(response);
+            await Navigation.PushAsync(new MyRequestsPage(responseList));
             listview.SelectedItem = null;
         }
-
     }
 
-    public async void GetUserInfo()
+        public async void GetUserInfo()
     {
         string response = await api.consumeapi("", "user/getuserinfo");
         var responseList = JsonConvert.DeserializeObject<GetUserDTO>(response);

@@ -27,10 +27,12 @@ public partial class AddApplication : ContentPage
         if (attachmentClickEnabled)
         {
             var results = await FilePicker.PickMultipleAsync();
-            if (results == null)
+            if (results == null || results.Count() == 0)
             {
                 stopLoad();
-                await Shell.Current.DisplayAlert("", "Please Select File", "Ok");}
+                await Shell.Current.DisplayAlert("", "Please Select File", "Ok");
+                return;
+            }
             else
             {
                 addPicture(results);
@@ -51,13 +53,13 @@ public partial class AddApplication : ContentPage
     private async void SelectFileButton_Clicked(object sender, EventArgs e)
     {
         startLoad();
-
         var results = await FilePicker.PickMultipleAsync();
 
-        if (results == null)
+        if (results == null || results.Count() == 0) 
         {
             stopLoad();
             await Shell.Current.DisplayAlert("", "Please Select File", "Ok");
+            return;
         }
         else
         {
