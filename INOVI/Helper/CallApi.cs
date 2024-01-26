@@ -14,7 +14,7 @@ namespace Helper
         //public static string _base = "http://www.InoviMobileApp.somee.
         ///api/";
         //Uri baseAddress = new Uri("https://InoviMobileApp.bsite.net/api/");
-        Uri baseAddress = new Uri("http://103.245.193.86:4292/api/");
+        Uri baseAddress = new Uri("https://inovimobileapp.bsite.net/api/");
         //Uri baseAddress = new Uri("https://localhost:7155//api/");
         //Uri baseAddress = new Uri(_base);
 

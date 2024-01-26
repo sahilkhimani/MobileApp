@@ -1,0 +1,119 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = true
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net7.0-android33.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = INOVI
+build_property.ProjectDir = D:\QueryPro\Inovi App\INOVI\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+
+[D:/QueryPro/Inovi App/INOVI/App.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = INOVI.App.xaml
+build_metadata.AdditionalFiles.TargetPath = App.xaml
+build_metadata.AdditionalFiles.RelativePath = App.xaml
+
+[D:/QueryPro/Inovi App/INOVI/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = INOVI.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[D:/QueryPro/Inovi App/INOVI/MainPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = INOVI.MainPage.xaml
+build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
+build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+
+[D:/QueryPro/Inovi App/INOVI/Pages/AddApplication.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = INOVI.Pages.AddApplication.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\AddApplication.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\AddApplication.xaml
+
+[D:/QueryPro/Inovi App/INOVI/Pages/EmailVerification.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = INOVI.Pages.EmailVerification.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\EmailVerification.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\EmailVerification.xaml
+
+[D:/QueryPro/Inovi App/INOVI/Pages/EnterNewPassword.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = INOVI.Pages.EnterNewPassword.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\EnterNewPassword.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\EnterNewPassword.xaml
+
+[D:/QueryPro/Inovi App/INOVI/Pages/ForgotPassword.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = INOVI.Pages.ForgotPassword.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\ForgotPassword.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\ForgotPassword.xaml
+
+[D:/QueryPro/Inovi App/INOVI/Pages/HelpandSupportPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = INOVI.Pages.HelpandSupportPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\HelpandSupportPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\HelpandSupportPage.xaml
+
+[D:/QueryPro/Inovi App/INOVI/Pages/HomePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = INOVI.Pages.HomePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\HomePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\HomePage.xaml
+
+[D:/QueryPro/Inovi App/INOVI/Pages/LoginPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = INOVI.Pages.LoginPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\LoginPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\LoginPage.xaml
+
+[D:/QueryPro/Inovi App/INOVI/Pages/MyRequestsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = INOVI.Pages.MyRequestsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\MyRequestsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\MyRequestsPage.xaml
+
+[D:/QueryPro/Inovi App/INOVI/Pages/MyStatsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = INOVI.Pages.MyStatsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\MyStatsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\MyStatsPage.xaml
+
+[D:/QueryPro/Inovi App/INOVI/Pages/ProfilePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = INOVI.Pages.ProfilePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\ProfilePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\ProfilePage.xaml
+
+[D:/QueryPro/Inovi App/INOVI/Pages/SettingPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = INOVI.Pages.SettingPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\SettingPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\SettingPage.xaml
+
+[D:/QueryPro/Inovi App/INOVI/Pages/Signup.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = INOVI.Pages.Signup.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\Signup.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\Signup.xaml
+
+[D:/QueryPro/Inovi App/INOVI/Resources/Styles/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = INOVI.Resources.Styles.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+
+[D:/QueryPro/Inovi App/INOVI/Resources/Styles/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = INOVI.Resources.Styles.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml

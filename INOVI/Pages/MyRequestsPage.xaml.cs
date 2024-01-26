@@ -1,4 +1,4 @@
-using CommunityToolkit.Maui.Alerts;
+﻿using CommunityToolkit.Maui.Alerts;
 using Helper;
 using INOVI.DTO;
 using Newtonsoft.Json;
@@ -21,18 +21,30 @@ public partial class MyRequestsPage : ContentPage
         titleEntry.Text = req.Title;
         descriptionLabel.Text = req.Description;
         remarksEntry.Text = req.Remarks;
+        Image zoomedImage;
 
         foreach (byte[] arr in req.Attachmentbytes)
         {
             ImageSource imageSource = ImageSource.FromStream(() => new MemoryStream(arr));
-            var image = new Image
+            zoomedImage = new Image
             {
                 Source = imageSource,
                 WidthRequest = 50,
                 HeightRequest = 50,
                 Margin = 5
             };
-            ImageContainer.Children.Add(image);
+
+            var tapGestureRecognizer = new TapGestureRecognizer();
+            tapGestureRecognizer.Tapped += OnImageTapped;
+            zoomedImage.GestureRecognizers.Add(tapGestureRecognizer);
+
+            ImageContainer.Children.Add(zoomedImage);
+        }
+
+         void OnImageTapped(object sender, EventArgs e)
+        {
+            Image tappedImage = (Image)sender;
+            Navigation.PushModalAsync(new ZoomedImagePage(tappedImage.Source));
         }
 
         if (Preferences.Get("roleId","") == "4" || Preferences.Get("roleId", "") == "1")
